@@ -16,6 +16,7 @@ function gotPoses(results)
   if(results.length > 0)
   {
     lWrist = results[0].pose.leftWrist.y;
+    rWrist = results[0].pose.righttWrist.y;
   }
 }
 function preload(){
@@ -26,4 +27,10 @@ function play(){
   song.play()
   song.setVolume(1)
   song.rate(1)}
+  if(rWrist>200){
+    song.play()
+    song.setVolume(1)
+    song.rate(1.5)
+  }
 }
+
